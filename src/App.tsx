@@ -1,5 +1,5 @@
 function App() {
-  return <button>test</button>;
+  return <button type='button'>test</button>;
 }
 
 export default App;

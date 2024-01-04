@@ -3,9 +3,13 @@ module.exports = {
   env: { browser: true, es2020: true },
   extends: [
     'eslint:recommended',
-    'plugin:@typescript-eslint/recommended',
+    'plugin:@typescript-eslint/strict-type-checked',
     'plugin:react-hooks/recommended',
+    'airbnb', 'airbnb/hooks', 'airbnb-typescript'
   ],
+  parserOptions: {
+      project: './tsconfig.json'
+     },
   ignorePatterns: ['dist', '.eslintrc.cjs'],
   parser: '@typescript-eslint/parser',
   plugins: ['react-refresh'],
@@ -14,5 +18,11 @@ module.exports = {
       'warn',
       { allowConstantExport: true },
     ],
+    'jsx-quotes': ['error', 'prefer-single'],
+    'react/react-in-jsx-scope': ['off'],
+    'linebreak-style': ['off'],
+    '@typescript-eslint/comma-dangle':['off'],
+    'react/function-component-definition':['off'],
+    'import/prefer-default-export': ['off']
   },
 }
